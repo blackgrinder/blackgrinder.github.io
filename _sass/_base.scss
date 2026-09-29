@@ -1,0 +1,15 @@
+$font: sans-serif;
+
+@mixin whiteText {
+    color: #fff;
+}
+
+body {
+    background-color: #000;
+    font-family: $font;
+    @include whiteText();
+}
+
+a {
+    @include whiteText();
+}
