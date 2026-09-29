@@ -3,6 +3,8 @@
     title: My site
 ---
 
+<script src="/assets/scripts/main.js"></script>
+
 <h1>{{ page.title }}</h1>
 <p>Hello World!</p>
 
@@ -14,7 +16,5 @@
 
 <section id="posts">
     <h2>Posts</h2>
-    {% for post in site.posts %}
-        <a href="{{post.url}}">{{ post.title }}</a>
-    {% endfor %}
+    <a href="/blog">Blog</a>
 </section>

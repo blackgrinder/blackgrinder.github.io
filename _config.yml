@@ -1,3 +1,7 @@
 sass:
   sass_dir: _sass
   style: compressed
+
+paginate: 2
+paginate_path: /blog/page:num
+plugins: [jekyll-paginate, jekyll-coffeescript]

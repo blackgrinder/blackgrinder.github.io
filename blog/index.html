@@ -1,0 +1,33 @@
+---
+    layout: main
+---
+
+{% for post in paginator.posts %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p>{{ post.date }}</p>
+{% endfor %}
+
+<section class="paginator">
+  <span>Pages: </span>
+  {% assign total_pages = paginator.total_pages %}
+  {% assign start_page = paginator.page | minus: 5 | at_least: 1 %}
+  {% assign final_page = paginator.page | plus: 5 | at_most: total_pages %}
+
+  {% for page in (start_page..final_page) %}
+    {% if page == paginator.page %}
+      <span><b>{{ page }}</b></span>
+      {% continue %}
+    {% endif %}
+
+    {% assign page_link = "/blog" %}
+
+    {% unless page == 1 %}
+      {% capture page_link %}
+        {{ page_link }}/page{{ page }}
+      {% endcapture %}
+    {% endunless %}
+
+    <a href="{{ page_link }}">{{ page }}</a>
+
+  {% endfor %}
+</section>
