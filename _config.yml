@@ -4,4 +4,7 @@ sass:
 
 paginate: 2
 paginate_path: /blog/page:num
-plugins: [jekyll-paginate, jekyll-coffeescript]
+
+plugins: 
+  - jekyll-paginate 
+  - jekyll-coffeescript

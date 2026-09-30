@@ -11,8 +11,8 @@
     <body>
         {{ content }}
         <footer style="margin-top: 36px">
-            {% if site.data.globals.initialYear < year %}
-                {{ site.data.globals.initialYear }}-{{ year }}
+            {% if site.data.globals.initial_year < year %}
+                {{ site.data.globals.initial_year }}-{{ year }}
             {% else %}
                 {{ year }}
             {% endif %} 
